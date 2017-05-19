@@ -1,4 +1,4 @@
-package com.demo.ch3_1v1mapper;
+package com.demo.ch3_ResultMapper;
 
 import java.util.Date;
 
