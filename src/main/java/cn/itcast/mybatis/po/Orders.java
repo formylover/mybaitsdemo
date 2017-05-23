@@ -1,7 +1,4 @@
-package com.demo.ch3_ResultMapper.ResultMapper1v1;
-
-import com.demo.ch3_ResultMapper.Orderdetail;
-import com.demo.ch3_ResultMapper.User;
+package cn.itcast.mybatis.po;
 
 import java.util.Date;
 import java.util.List;
@@ -20,6 +17,8 @@ public class Orders {
     //用户信息
     private User user;
     
+    //订单明细
+    private List<Orderdetail> orderdetails;
 
     public Integer getId() {
         return id;
@@ -69,14 +68,15 @@ public class Orders {
 		this.user = user;
 	}
 
-
-
-	@Override
-	public String toString() {
-		return "Orders [id=" + id + ", userId=" + userId + ", number=" + number
-				+ ", createtime=" + createtime + ", note=" + note + ", user="
-				+ user + "]";
+	public List<Orderdetail> getOrderdetails() {
+		return orderdetails;
 	}
+
+	public void setOrderdetails(List<Orderdetail> orderdetails) {
+		this.orderdetails = orderdetails;
+	}
+
+	
     
     
 }

@@ -1,24 +1,29 @@
-package com.demo.ch3_ResultMapper.ResultMapper1v1;
+package cn.itcast.mybatis.po;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
  * <p>Title: User</p>
- * <p>Description:用户信息 </p>
+ * <p>Description:用户po </p>
  * <p>Company: www.itcast.com</p> 
  * @author	传智.燕青
- * @date	2015-2-2下午1:03:07
+ * @date	2015-4-22上午10:24:16
  * @version 1.0
  */
 public class User implements Serializable {
+	
+	//属性名和数据库表的字段对应
 	private int id;
 	private String username;// 用户姓名
 	private String sex;// 性别
 	private Date birthday;// 生日
 	private String address;// 地址
-
+	
+	//用户创建的订单列表
+	private List<Orders> ordersList;
 	public int getId() {
 		return id;
 	}
@@ -54,8 +59,12 @@ public class User implements Serializable {
 		return "User [id=" + id + ", username=" + username + ", sex=" + sex
 				+ ", birthday=" + birthday + ", address=" + address + "]";
 	}
+	public List<Orders> getOrdersList() {
+		return ordersList;
+	}
+	public void setOrdersList(List<Orders> ordersList) {
+		this.ordersList = ordersList;
+	}
 
-	
-	
 
 }
