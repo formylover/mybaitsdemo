@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demo.Mapper.UserMapper">
+<mapper namespace="com.demo.ch3_Mapper.UserMapper">
     <select id="findUserById" parameterType="int" resultType="com.demo.ch1_plain.User">
         select * from user where id = #{value}
     </select>

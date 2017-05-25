@@ -1,4 +1,4 @@
-package com.demo.Mapper;
+package com.demo.ch3_Mapper;
 
 import com.demo.ch1_plain.User;
 import org.apache.ibatis.io.Resources;
@@ -24,11 +24,11 @@ public class UerDaoRun {
     }
     @Test
     public void findUser(){
-        SqlSession sqlSession=sqlSessionFactory.openSession();
+       SqlSession sqlSession=sqlSessionFactory.openSession();
 
        UserMapper userMapper=sqlSession.getMapper(UserMapper.class) ;
        User user=userMapper.findUserById(1);
-        System.out.println(user.getName());
+       System.out.println(user.getName());
     }
 
 }

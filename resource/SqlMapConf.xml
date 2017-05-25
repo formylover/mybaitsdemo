@@ -15,9 +15,9 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="./User.xml"/>
+        <mapper resource="./plain/User.xml"/>
         <mapper resource="./Dao/UserDao.xml"/>
         <mapper resource="./Mapper/UserMapper.xml"/>
-        <package name="com.demo.ch3_ResultMapper.ResultMapper"></package>
+        <package name="com.demo.ch4_ResultMapper.ResultMapper"></package>
     </mappers>
 </configuration>

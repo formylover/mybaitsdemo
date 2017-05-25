@@ -2,15 +2,15 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demo.ch3_ResultMapper.ResultMapper.OrdersMapperCustom">
+<mapper namespace="com.demo.ch4_ResultMapper.ResultMapper.OrdersMapperCustom">
 
-    <resultMap id="OrdersUserResultMap" type="com.demo.ch3_ResultMapper.ResultMapper.Orders">
+    <resultMap id="OrdersUserResultMap" type="com.demo.ch4_ResultMapper.ResultMapper.Orders">
         <id column="id" property="id"/>
         <result column="user_id" property="userId"/>
         <result column="number" property="number"/>
         <result column="createtime" property="createtime"/>
         <result column="note" property="note"/>
-        <association property="user" javaType="com.demo.ch3_ResultMapper.User">
+        <association property="user" javaType="com.demo.ch4_ResultMapper.User">
             <id column="user_id" property="id"></id>
             <result column="username" property="username"></result>
             <result column="sex" property="sex"></result>
@@ -19,8 +19,8 @@
         </association>
     </resultMap>
 
-    <resultMap id="OrdersAndOrderDetailResultMap" type="com.demo.ch3_ResultMapper.Orders" extends="OrdersUserResultMap">
-        <collection property="orderdetails"  ofType="com.demo.ch3_ResultMapper.Orderdetail" >
+    <resultMap id="OrdersAndOrderDetailResultMap" type="com.demo.ch4_ResultMapper.Orders" extends="OrdersUserResultMap">
+        <collection property="orderdetails"  ofType="com.demo.ch4_ResultMapper.Orderdetail" >
            <id column="orderdetail_id" property="id"></id>
             <result column="items_id" property="itemsId"></result>
             <result column="items_num" property="itemsNum"></result>
@@ -28,7 +28,7 @@
         </collection>
     </resultMap>
 
-    <resultMap id="UserAndItemsResultMap" type="com.demo.ch3_ResultMapper.User">
+    <resultMap id="UserAndItemsResultMap" type="com.demo.ch4_ResultMapper.User">
         <id column="user_id" property="id"></id>
         <result column="username" property="username"></result>
         <result column="sex" property="sex"></result>
@@ -36,7 +36,7 @@
         <!-- 订单信息
                 一个用户对应多个订单，使用collection映射
                  -->
-        <collection property="ordersList" ofType="com.demo.ch3_ResultMapper.Orders">
+        <collection property="ordersList" ofType="com.demo.ch4_ResultMapper.Orders">
             <id column="id" property="id"/>
             <result column="user_id" property="userId"/>
             <result column="number" property="number"/>
@@ -46,7 +46,7 @@
             <!-- 订单明细
         一个订单包括 多个明细
          -->
-            <collection property="orderdetails" ofType="com.demo.ch3_ResultMapper.Orderdetail">
+            <collection property="orderdetails" ofType="com.demo.ch4_ResultMapper.Orderdetail">
                 <id column="orderdetail_id" property="id"/>
                 <result column="items_id" property="itemsId"/>
                 <result column="items_num" property="itemsNum"/>
@@ -55,7 +55,7 @@
                 <!-- 商品信息
          一个订单明细对应一个商品
           -->
-                <association property="items" javaType="com.demo.ch3_ResultMapper.Items">
+                <association property="items" javaType="com.demo.ch4_ResultMapper.Items">
                     <id column="items_id" property="id"/>
                     <result column="items_name" property="name"/>
                     <result column="items_detail" property="detail"/>

@@ -2,18 +2,18 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.demo.Mapper.UserMapper">
+<mapper namespace="com.demo.ch3_Mapper.UserMapper">
     <select id="findUserById" parameterType="int" resultType="com.demo.ch1_plain.User">
         select * from user where id = #{value}
     </select>
 
-    <resultMap id="OrdersUserResultMap" type="com.demo.ch3_ResultMapper.ResultMapper1v1.Orders">
+    <resultMap id="OrdersUserResultMap" type="com.demo.ch4_ResultMapper.ResultMapper1v1.Orders">
         <id column="id" property="id"/>
         <result column="user_id" property="userId"/>
         <result column="number" property="number"/>
         <result column="createtime" property="createtime"/>
         <result column="note" property="note"/>
-        <association property="user" javaType="com.demo.ch3_ResultMapper.ResultMapper1v1.User">
+        <association property="user" javaType="com.demo.ch4_ResultMapper.ResultMapper1v1.User">
             <id column="user_id" property="id"></id>
             <result column="sex" property="sex"></result>
             <result column="address" property="address"></result>

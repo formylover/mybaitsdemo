@@ -1,4 +1,4 @@
-package com.demo.ch3_ResultMapper;
+package com.demo.ch4_ResultMapper;
 
 import java.util.List;
 

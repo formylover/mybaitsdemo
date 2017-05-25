@@ -1,6 +1,6 @@
-package com.demo.ch3_ResultMapper.ResultMapper;
+package com.demo.ch4_ResultMapper.ResultMapper;
 
-import com.demo.ch3_ResultMapper.User;
+import com.demo.ch4_ResultMapper.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

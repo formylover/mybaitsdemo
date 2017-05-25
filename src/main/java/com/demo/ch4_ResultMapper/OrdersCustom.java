@@ -1,4 +1,4 @@
-package com.demo.ch3_ResultMapper;
+package com.demo.ch4_ResultMapper;
 
 /**
  * 订单自定义po，包括订单信息、用户信息

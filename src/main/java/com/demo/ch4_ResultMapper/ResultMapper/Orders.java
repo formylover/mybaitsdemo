@@ -1,7 +1,7 @@
-package com.demo.ch3_ResultMapper.ResultMapper;
+package com.demo.ch4_ResultMapper.ResultMapper;
 
 
-import com.demo.ch3_ResultMapper.User;
+import com.demo.ch4_ResultMapper.User;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.demo.Mapper;
+package com.demo.ch3_Mapper;
 
 import com.demo.ch1_plain.User;
 
