@@ -5,9 +5,19 @@
 <configuration>
 
     <!--定义别名-->
+    <!-- 别名定义 -->
+    <typeAliases>
 
+
+        <!-- 批量别名定义
+        指定包名，mybatis自动扫描包中的po类，自动定义别名，别名就是类名（首字母大写或小写都可以）
+        -->
+        <package name="com.demo.po"/>
+
+    </typeAliases>
     <!--加载 映射文件-->
     <mappers >
+        <!--第一个例子-->
         <mapper resource="sqlMap/User.xml"/>
     </mappers>
 </configuration>

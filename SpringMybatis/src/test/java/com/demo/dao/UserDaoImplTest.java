@@ -1,5 +1,6 @@
 package com.demo.dao;
 
+import com.demo.mapper.UserMapper;
 import com.demo.po.User;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,5 +25,10 @@ public class UserDaoImplTest {
         System.out.println(user);
 
     }
-
+    @Test
+    public void findUserByIdMapper() throws Exception {
+        UserMapper userMapper= (UserMapper) applicationContext.getBean("userMapper");
+        User user=userMapper.findUserById(1);
+        System.out.println(user);
+    }
 }
