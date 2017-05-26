@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SpringMybatis/SpringMybatis.iml" filepath="$PROJECT_DIR$/SpringMybatis/SpringMybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/mybaitsdemo.iml" filepath="$PROJECT_DIR$/mybaitsdemo.iml" />
     </modules>
   </component>

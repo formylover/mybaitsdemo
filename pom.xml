@@ -5,7 +5,10 @@
   <groupId>com.demo</groupId>
   <artifactId>mybaitsdemo</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+    <modules>
+        <module>SpringMybatis</module>
+    </modules>
+    <packaging>pom</packaging>
 
   <name>mybaitsdemo</name>
   <url>http://maven.apache.org</url>
